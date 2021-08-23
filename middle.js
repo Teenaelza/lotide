@@ -30,7 +30,7 @@ const middle = function(array) {
   const isEven = array.length % 2 === 0 ? true : false;
   if (array.length > 2) {
     if (isEven) {
- 
+      
       middleArray.push(array[Math.floor(array.length / 2 - 1)]);
       middleArray.push(array[(Math.floor(array.length / 2))]);
     } else {
