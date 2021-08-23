@@ -3,10 +3,12 @@ const head = require('../head');
 const tail = require('../tail');
 const eqArrays = require('../eqArrays');
 const assertArraysEqual = require('../assertArraysEqual');
+const middle = require('../middle');
+
 console.log("------assertequal---------")
 //for assertequal edgecases
 assertEqual(1,1);
-console.log("------head---------")
+console.log("------implement head assertions---------")
 //assertion for head.js
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
@@ -39,3 +41,10 @@ assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 console.log("-----check if two arrays are equal---------")
 assertArraysEqual([1, 2, 3], [1,2,3,5,8]); // => should PASS
 assertArraysEqual([1, 2, 3,5,8], [1, 2, 3,5,8]); // => should PASS
+console.log("-----Implement middle assertions---------")
+assertArraysEqual(middle([1, 2, 3]), [2]); // => should PASS
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => should PASS
+assertArraysEqual(middle([1, 2]),[]);
+assertArraysEqual(middle([1]),[]);
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => should PASS
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3,4]); // => should PASS
