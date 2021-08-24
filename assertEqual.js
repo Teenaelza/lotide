@@ -1,5 +1,4 @@
 // FUNCTION IMPLEMENTATION
-
 const assertEqual = function(actual, expected) {
   let emoji = "";
   if (actual === expected) {
